@@ -67,13 +67,12 @@ struct HomeView: View {
 					ForEach(elements) { element in
 						
 						ElementCard(element: element)
-							.buttonStyle(PlainButtonStyle())
 							.listRowSeparator(.hidden)
 							.listRowInsets(EdgeInsets(top: 8, leading: 8,
 													  bottom: 8, trailing: 8))
 							
 							.background {
-								NavigationLink("", destination: Text("ffff"))
+								NavigationLink("", destination: DetailView(element: element))
 									
 							}
 							.listRowBackground(Color.white)

@@ -1,9 +1,4 @@
-//
-//  NetworkModel.swift
-//
-//  Created by Muhammad AbdelaRahman on 08/02/2021.
-//  Copyright © 2021 WMCairo. All rights reserved.
-//
+
 
 import Foundation
 
@@ -91,3 +86,55 @@ public struct APIException: Error {
 
 
 
+enum ResponseStatus<R: Codable> {
+	
+	case notRequested
+	case isLoading(lastResponse: R?)
+	case loaded(response: R)
+	case fail(msg: String, lastResponse: R?)
+	
+	
+	mutating func loading() {
+		switch self {
+		case .notRequested:
+			self = .isLoading(lastResponse: nil)
+		case .fail (_, let lastResponse):
+			self = .isLoading(lastResponse: lastResponse)
+		case .isLoading(let lastResponse):
+			self = .isLoading(lastResponse: lastResponse)
+		case .loaded(let lastResponse):
+			self = .isLoading(lastResponse: lastResponse)
+		}
+	}
+	
+	mutating func didLoaded(response: R) {
+		self = .loaded(response: response)
+	}
+	
+	mutating func didfail(exception: APIException) {
+		switch self {
+		case .notRequested:
+			self = .fail(msg: exception.msg, lastResponse: nil)
+		case .fail (_, let lastResponse):
+			self = .fail(msg: exception.msg, lastResponse: lastResponse)
+		case .isLoading(let lastResponse):
+			self = .fail(msg: exception.msg, lastResponse: lastResponse)
+		case .loaded(let lastResponse):
+			self = .fail(msg: exception.msg, lastResponse: lastResponse)
+		}
+	}
+	
+	var response: R? {
+		switch self {
+		case .notRequested:
+			return nil
+		case .fail(_, let lastResponse):
+			return lastResponse
+		case .isLoading(let lastResponse):
+			return lastResponse
+		case .loaded(let lastResponse):
+			return lastResponse
+		}
+	}
+	
+}

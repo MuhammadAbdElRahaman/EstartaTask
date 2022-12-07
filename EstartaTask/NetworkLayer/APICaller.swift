@@ -1,9 +1,4 @@
-//
-//  APICaller.swift
-//
-//  Created by Muhammad AbdelaRahman on 08/02/2021.
-//  Copyright © 2021 WMCairo. All rights reserved.
-//
+
 
 import Foundation
 import Combine

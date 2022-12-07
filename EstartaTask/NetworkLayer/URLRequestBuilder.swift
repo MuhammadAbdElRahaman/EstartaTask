@@ -1,9 +1,3 @@
-//
-//  URLRequestBuilder.swift
-//
-//  Created by Sameh Aly on 4/24/18.
-//  Copyright © 2018 WMCairo. All rights reserved.
-//
 
 import Foundation
 

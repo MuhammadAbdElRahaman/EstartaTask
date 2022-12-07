@@ -8,25 +8,30 @@
 
 /* Begin PBXBuildFile section */
 		887F2625293FE0F200E64329 /* EstartaTaskApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 887F2624293FE0F200E64329 /* EstartaTaskApp.swift */; };
-		887F2627293FE0F200E64329 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 887F2626293FE0F200E64329 /* ContentView.swift */; };
+		887F2627293FE0F200E64329 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 887F2626293FE0F200E64329 /* HomeView.swift */; };
 		887F2629293FE0F400E64329 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 887F2628293FE0F400E64329 /* Assets.xcassets */; };
 		887F262C293FE0F400E64329 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 887F262B293FE0F400E64329 /* Preview Assets.xcassets */; };
 		887F2638293FE84F00E64329 /* APICaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 887F2633293FE84F00E64329 /* APICaller.swift */; };
 		887F2639293FE84F00E64329 /* URLRequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 887F2634293FE84F00E64329 /* URLRequestBuilder.swift */; };
 		887F263B293FE84F00E64329 /* EndPoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 887F2636293FE84F00E64329 /* EndPoints.swift */; };
 		887F263C293FE84F00E64329 /* NetworkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 887F2637293FE84F00E64329 /* NetworkModel.swift */; };
+		887F263F293FF66200E64329 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 887F263E293FF66200E64329 /* HomeViewModel.swift */; };
+		887F2643293FF67200E64329 /* EstarModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 887F2642293FF67200E64329 /* EstarModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		887F2621293FE0F200E64329 /* EstartaTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EstartaTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		887F2624293FE0F200E64329 /* EstartaTaskApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EstartaTaskApp.swift; sourceTree = "<group>"; };
-		887F2626293FE0F200E64329 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		887F2626293FE0F200E64329 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		887F2628293FE0F400E64329 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		887F262B293FE0F400E64329 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		887F2633293FE84F00E64329 /* APICaller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APICaller.swift; sourceTree = "<group>"; };
 		887F2634293FE84F00E64329 /* URLRequestBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLRequestBuilder.swift; sourceTree = "<group>"; };
 		887F2636293FE84F00E64329 /* EndPoints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndPoints.swift; sourceTree = "<group>"; };
 		887F2637293FE84F00E64329 /* NetworkModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkModel.swift; sourceTree = "<group>"; };
+		887F263E293FF66200E64329 /* HomeViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		887F2640293FF66A00E64329 /* VoucherView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VoucherView.swift; sourceTree = "<group>"; };
+		887F2642293FF67200E64329 /* EstarModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EstarModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,9 +64,9 @@
 		887F2623293FE0F200E64329 /* EstartaTask */ = {
 			isa = PBXGroup;
 			children = (
+				887F263D293FF61600E64329 /* Home */,
 				887F2632293FE83000E64329 /* NetworkLayer */,
 				887F2624293FE0F200E64329 /* EstartaTaskApp.swift */,
-				887F2626293FE0F200E64329 /* ContentView.swift */,
 				887F2628293FE0F400E64329 /* Assets.xcassets */,
 				887F262A293FE0F400E64329 /* Preview Content */,
 			);
@@ -85,6 +90,17 @@
 				887F2634293FE84F00E64329 /* URLRequestBuilder.swift */,
 			);
 			path = NetworkLayer;
+			sourceTree = "<group>";
+		};
+		887F263D293FF61600E64329 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				887F2642293FF67200E64329 /* EstarModel.swift */,
+				887F2640293FF66A00E64329 /* VoucherView.swift */,
+				887F263E293FF66200E64329 /* HomeViewModel.swift */,
+				887F2626293FE0F200E64329 /* HomeView.swift */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -157,12 +173,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				887F2627293FE0F200E64329 /* ContentView.swift in Sources */,
+				887F2627293FE0F200E64329 /* HomeView.swift in Sources */,
 				887F2639293FE84F00E64329 /* URLRequestBuilder.swift in Sources */,
 				887F2638293FE84F00E64329 /* APICaller.swift in Sources */,
 				887F2625293FE0F200E64329 /* EstartaTaskApp.swift in Sources */,
+				887F263F293FF66200E64329 /* HomeViewModel.swift in Sources */,
 				887F263B293FE84F00E64329 /* EndPoints.swift in Sources */,
 				887F263C293FE84F00E64329 /* NetworkModel.swift in Sources */,
+				887F2643293FF67200E64329 /* EstarModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -296,8 +314,9 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -305,9 +324,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.estarta.Task.EstartaTask;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -324,8 +346,9 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -333,9 +356,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.estarta.Task.EstartaTask;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
